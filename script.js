@@ -287,8 +287,8 @@ function checkBoard() {
     const col5row5yellow = document.getElementById('column5-row5').classList.contains('yellow') 
     const col5row4yellow =  document.getElementById('column5-row4').classList.contains('yellow')
     const col5row3yellow = document.getElementById('column5-row3').classList.contains('yellow')
-    const col5row2yellow = document.getElementById('column4-row2').classList.contains('yellow')
-    const col5row1yellow = document.getElementById('column4-row1').classList.contains('yellow')
+    const col5row2yellow = document.getElementById('column5-row2').classList.contains('yellow')
+    const col5row1yellow = document.getElementById('column5-row1').classList.contains('yellow')
     if (col5row6yellow && col5row5yellow && col5row4yellow && col5row3yellow) {
         alert('yellow wins');
     }
@@ -302,9 +302,35 @@ function checkBoard() {
     const col6row5yellow = document.getElementById('column6-row5').classList.contains('yellow') 
     const col6row4yellow =  document.getElementById('column6-row4').classList.contains('yellow')
     const col6row3yellow = document.getElementById('column6-row3').classList.contains('yellow')
+    const col6row2yellow = document.getElementById('column6-row2').classList.contains('yellow')
+    const col6row1yellow = document.getElementById('column6-row1').classList.contains('yellow')
     if (col6row6yellow && col6row5yellow && col6row4yellow && col6row3yellow) {
         alert('yellow wins');
     }
+    if (col6row1yellow && col6row2yellow && col6row3yellow && col6row4yellow) {
+        alert('yellow wins');
+    } 
+    if (col6row5yellow && col6row4yellow && col6row3yellow && col6row2yellow) {
+        alert('yellow wins');
+    }
     // start horizontal
-    
+    if (col1row6red && col2row6red && col3row6red && col4row6red) {
+        alert('red wins');
+    }
+    if (col2row6red && col3row6red && col4row6red && col5row6red) {
+        alert('red wins');
+    } 
+    if (col3row6red && col4row6red && col5row6red && col6row6red) {
+        alert('red wins');
+    }
+    // ROW 5
+    if (col1row5red && col2row5red && col3row5red && col4row5red) {
+        alert('red wins');
+    }
+    if (col2row5red && col3row5red && col4row5red && col5row5red) {
+        alert('red wins');
+    } 
+    if (col3row5red && col4row5red && col5row5red && col6row5red) {
+        alert('red wins');
+    }
 }
