@@ -211,43 +211,91 @@ function checkBoard() {
     const col6row5red = document.getElementById('column6-row5').classList.contains('red') 
     const col6row4red =  document.getElementById('column6-row4').classList.contains('red')
     const col6row3red = document.getElementById('column6-row3').classList.contains('red')
+    const col6row2red =  document.getElementById('column6-row2').classList.contains('red')
+    const col6row1red =  document.getElementById('column6-row1').classList.contains('red')
    if (col6row6red && col6row5red && col6row4red && col6row3red) {
         alert('red wins');
     }
-    
+    if (col6row1red && col6row2red && col6row3red && col6row4red) {
+        alert('red wins');
+    } 
+    if (col6row5red && col6row4red && col6row3red && col6row2red) {
+        alert('red wins');
+    }
+    // YELLOW START
     const col1row6yellow = document.getElementById('column1-row6').classList.contains('yellow')
     const col1row5yellow = document.getElementById('column1-row5').classList.contains('yellow') 
     const col1row4yellow =  document.getElementById('column1-row4').classList.contains('yellow')
     const col1row3yellow = document.getElementById('column1-row3').classList.contains('yellow')
+    const col1row2yellow = document.getElementById('column1-row2').classList.contains('yellow')
+    const col1row1yellow = document.getElementById('column1-row1').classList.contains('yellow')
     if (col1row6yellow && col1row5yellow && col1row4yellow && col1row3yellow) {
+        alert('yellow wins');
+    }
+    if (col1row1yellow && col1row2yellow && col1row3yellow && col1row4yellow) {
+        alert('yellow wins');
+    } 
+    if (col1row5yellow && col1row4yellow && col1row3yellow && col1row2yellow) {
         alert('yellow wins');
     }
     const col2row6yellow = document.getElementById('column2-row6').classList.contains('yellow')
     const col2row5yellow = document.getElementById('column2-row5').classList.contains('yellow') 
     const col2row4yellow =  document.getElementById('column2-row4').classList.contains('yellow')
     const col2row3yellow = document.getElementById('column2-row3').classList.contains('yellow')
+    const col2row2yellow = document.getElementById('column2-row2').classList.contains('yellow')
+    const col2row1yellow = document.getElementById('column2-row1').classList.contains('yellow')
     if (col2row6yellow && col2row5yellow && col2row4yellow && col2row3yellow) {
+        alert('yellow wins');
+    }
+    if (col2row1yellow && col2row2yellow && col2row3yellow && col2row4yellow) {
+        alert('yellow wins');
+    } 
+    if (col2row5yellow && col2row4yellow && col2row3yellow && col2row2yellow) {
         alert('yellow wins');
     }
     const col3row6yellow = document.getElementById('column3-row6').classList.contains('yellow')
     const col3row5yellow = document.getElementById('column3-row5').classList.contains('yellow') 
     const col3row4yellow =  document.getElementById('column3-row4').classList.contains('yellow')
     const col3row3yellow = document.getElementById('column3-row3').classList.contains('yellow')
+    const col3row2yellow = document.getElementById('column3-row2').classList.contains('yellow')
+    const col3row1yellow = document.getElementById('column3-row1').classList.contains('yellow')
     if (col3row6yellow && col3row5yellow && col3row4yellow && col3row3yellow) {
+        alert('yellow wins');
+    }
+    if (col3row1yellow && col3row2yellow && col3row3yellow && col3row4yellow) {
+        alert('yellow wins');
+    } 
+    if (col3row5yellow && col3row4yellow && col3row3yellow && col3row2yellow) {
         alert('yellow wins');
     }
     const col4row6yellow = document.getElementById('column4-row6').classList.contains('yellow')
     const col4row5yellow = document.getElementById('column4-row5').classList.contains('yellow') 
     const col4row4yellow =  document.getElementById('column4-row4').classList.contains('yellow')
     const col4row3yellow = document.getElementById('column4-row3').classList.contains('yellow')
+    const col4row2yellow = document.getElementById('column4-row2').classList.contains('yellow')
+    const col4row1yellow = document.getElementById('column4-row1').classList.contains('yellow')
     if (col4row6yellow && col4row5yellow && col4row4yellow && col4row3yellow) {
+        alert('yellow wins');
+    }
+    if (col4row1yellow && col4row2yellow && col4row3yellow && col4row4yellow) {
+        alert('yellow wins');
+    } 
+    if (col4row5yellow && col4row4yellow && col4row3yellow && col4row2yellow) {
         alert('yellow wins');
     }
     const col5row6yellow = document.getElementById('column5-row6').classList.contains('yellow')
     const col5row5yellow = document.getElementById('column5-row5').classList.contains('yellow') 
     const col5row4yellow =  document.getElementById('column5-row4').classList.contains('yellow')
     const col5row3yellow = document.getElementById('column5-row3').classList.contains('yellow')
+    const col5row2yellow = document.getElementById('column4-row2').classList.contains('yellow')
+    const col5row1yellow = document.getElementById('column4-row1').classList.contains('yellow')
     if (col5row6yellow && col5row5yellow && col5row4yellow && col5row3yellow) {
+        alert('yellow wins');
+    }
+    if (col5row1yellow && col5row2yellow && col5row3yellow && col5row4yellow) {
+        alert('yellow wins');
+    } 
+    if (col5row5yellow && col5row4yellow && col5row3yellow && col5row2yellow) {
         alert('yellow wins');
     }
     const col6row6yellow = document.getElementById('column6-row6').classList.contains('yellow')
