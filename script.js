@@ -363,6 +363,17 @@ function checkBoard() {
     if (col3row2red && col4row2red && col5row2red && col6row2red) {
         alert('red wins');
     }
+    // ROW 1
+    if (col1row1red && col2row1red && col3row1red && col4row1red) {
+        alert('red wins');
+    }
+    if (col2row1red && col3row1red && col4row1red && col5row1red) {
+        alert('red wins');
+    } 
+    if (col3row1red && col4row1red && col5row1red && col6row1red) {
+        alert('red wins');
+    }
+
 }
     
     
