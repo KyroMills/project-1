@@ -194,6 +194,36 @@ function checkBoard() {
     if (col2row6yellow && col2row5yellow && col2row4yellow && col2row3yellow) {
         alert('yellow wins');
     }
+    const col3row6yellow = document.getElementById('column3-row6').classList.contains('yellow')
+    const col3row5yellow = document.getElementById('column3-row5').classList.contains('yellow') 
+    const col3row4yellow =  document.getElementById('column3-row4').classList.contains('yellow')
+    const col3row3yellow = document.getElementById('column3-row3').classList.contains('yellow')
+    if (col3row6yellow && col3row5yellow && col3row4yellow && col3row3yellow) {
+        alert('yellow wins');
+    }
+    const col4row6yellow = document.getElementById('column4-row6').classList.contains('yellow')
+    const col4row5yellow = document.getElementById('column4-row5').classList.contains('yellow') 
+    const col4row4yellow =  document.getElementById('column4-row4').classList.contains('yellow')
+    const col4row3yellow = document.getElementById('column4-row3').classList.contains('yellow')
+    if (col4row6yellow && col4row5yellow && col4row4yellow && col4row3yellow) {
+        alert('yellow wins');
+    }
+    const col5row6yellow = document.getElementById('column5-row6').classList.contains('yellow')
+    const col5row5yellow = document.getElementById('column5-row5').classList.contains('yellow') 
+    const col5row4yellow =  document.getElementById('column5-row4').classList.contains('yellow')
+    const col5row3yellow = document.getElementById('column5-row3').classList.contains('yellow')
+    if (col5row6yellow && col5row5yellow && col5row4yellow && col5row3yellow) {
+        alert('yellow wins');
+    }
+    const col6row6yellow = document.getElementById('column6-row6').classList.contains('yellow')
+    const col6row5yellow = document.getElementById('column6-row5').classList.contains('yellow') 
+    const col6row4yellow =  document.getElementById('column6-row4').classList.contains('yellow')
+    const col6row3yellow = document.getElementById('column6-row3').classList.contains('yellow')
+    if (col6row6yellow && col6row5yellow && col6row4yellow && col6row3yellow) {
+        alert('yellow wins');
+    }
+    // horizontal
+    
 }
 
 // gravity = [6,6,6,6,6,6]
