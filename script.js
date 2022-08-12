@@ -4,6 +4,7 @@ let playerR = "red";
 let playerY = "yellow";
 let gameOver 
 let firstPlayer = playerR
+
 // let circleButtons
 let countClicks = 0
 let myArray = [6,6,6,6,6,6]
@@ -31,14 +32,16 @@ let winningArray = [
 [26, 25, 24, 23], [29, 30, 31, 32], [33, 32, 31, 30], 
 [36, 37, 38, 39], [40, 39, 38, 37], [7, 14, 21, 28], 
 [8, 15, 22, 29], [9, 16, 23, 30], [10, 17, 24, 31], 
-[11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34] 
+[11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34], 
 ]; 
+circleButtons = document.querySelectorAll("a");   
+winMessageDiv = document.querySelector("#message");
+
 function winningScore() {
   if (currentPlayer.score = 4)
     return;
 }
-circleButtons = document.querySelectorAll("a");   
-winMessageDiv = document.querySelector("#message");
+
 // document.getElementById('circle').onclick = changeColor;   
 
 // function onClick() {
@@ -95,43 +98,48 @@ winMessageDiv = document.querySelector("#message");
               } else {
                   document.getElementById(column+'-row6').classList.add('taken','yellow')
                   firstPlayer = playerR
+                  checkBoard()
               }
-              
+            
         }
         
     }) 
-}
+} 
 );
 
-checkBoard()
-function checkBoard() {
-    for (let y = 0; y < winningArray.length; y++) {
-      const circle1 = circleButtons[winningArray[y][0]]
-      console.log(circle1)
-      const circle2 = circleButtons[winningArray[y][1]]
-      const circle3 = circleButtons[winningArray[y][2]]
-      const circle4 = circleButtons[winningArray[y][3]]
 
-      //check those squares to see if they all have the class of player-one
-      if (
-        circle1.classList.contains('red') &&
-        circle2.classList.contains('red') &&
-        circle3.classList.contains('red') &&
-        circle4.classList.contains('red')
-      )
-      {
-        console.log('Red Wins!')
-      }
-      //check those squares to see if they all have the class of player-two
-      else if (
-        circle1.classList.contains('yellow') &&
-        circle2.classList.contains('yellow') &&
-        circle3.classList.contains('yellow') &&
-        circle4.classList.contains('yellow')
-      )
-      {
-        console.log('Yellow Wins!')
-      }
+function checkBoard() {
+    for (let x = 0; x < winningArray.length; x++) {
+        for (let y = 0; y < winningArray[x].length; y++) {
+            
+            const circle1 = circleButtons[winningArray[x][y]] 
+            const circle2 = circleButtons[winningArray[x][y]]
+            const circle3 = circleButtons[winningArray[x][y]]
+            const circle4 = circleButtons[winningArray[x][y]]
+            console.log(circle1)
+            debugger;
+        //check those squares to see if they all have the class of player-one
+        if (
+            
+            circle1.classList.contains('red') &&
+            circle2.classList.contains('red') &&
+            circle3.classList.contains('red') &&
+            circle4.classList.contains('red')
+        )
+        {
+            console.log('Red Wins!')
+        }
+        //check those squares to see if they all have the class of player-two
+        else if (
+            circle1.classList.contains('yellow') &&
+            circle2.classList.contains('yellow') &&
+            circle3.classList.contains('yellow') &&
+            circle4.classList.contains('yellow')
+        )
+        {
+            console.log('Yellow Wins!')
+        }
+        }
     }
   }
   
