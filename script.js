@@ -34,7 +34,7 @@ let winningArray = [
 [8, 15, 22, 29], [9, 16, 23, 30], [10, 17, 24, 31], 
 [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34], 
 ]; 
-circleButtons = document.querySelectorAll("a");   
+let circleButtons = document.querySelectorAll("a");   
 winMessageDiv = document.querySelector("#message");
 
 function winningScore() {
@@ -49,6 +49,7 @@ function winningScore() {
   getCircles.forEach(function(element) {
     let fillCircle = element.style;
     element.addEventListener('click',function() {
+
         // console.log(this.id.split('-'))
         let idSplit = this.id.split('-')
         let column = idSplit[0]
@@ -98,51 +99,103 @@ function winningScore() {
               } else {
                   document.getElementById(column+'-row6').classList.add('taken','yellow')
                   firstPlayer = playerR
-                  checkBoard()
+                  
               }
             
         }
-        
+        checkBoard()
     }) 
 } 
 );
+// function checkBoard() {
+//     for (let y = 0; y < winningArray.length; y++) {
+//       const circle1 = circleButtons[winningArray[y][0]]
+//       const circle2 = circleButtons[winningArray[y][1]]
+//       const circle3 = circleButtons[winningArray[y][2]]
+//       const circle4 = circleButtons[winningArray[y][3]]
 
-
+//       //check those squares to see if they all have the class of player-one
+//       if (
+//         circle1.classList.contains('playerR') &&
+//         circle2.classList.contains('playerR') &&
+//         circle3.classList.contains('playerR') &&
+//         circle4.classList.contains('playerR')
+//       )
+//       {
+//         result.innerHTML = 'Player One Wins!'
+//       }
+//       //check those squares to see if they all have the class of player-two
+//       if (
+//         circle1.classList.contains('playerY') &&
+//         circle2.classList.contains('playerY') &&
+//         circle3.classList.contains('playerY') &&
+//         circle4.classList.contains('playerY')
+//       )
+//       {
+//         result.innerHTML = 'Player Two Wins!'
+//       }
+//     }
+//   }
+// vertical
 function checkBoard() {
-    for (let x = 0; x < winningArray.length; x++) {
-        for (let y = 0; y < winningArray[x].length; y++) {
-            
-            const circle1 = circleButtons[winningArray[x][y]] 
-            const circle2 = circleButtons[winningArray[x][y]]
-            const circle3 = circleButtons[winningArray[x][y]]
-            const circle4 = circleButtons[winningArray[x][y]]
-            console.log(circle1)
-            debugger;
-        //check those squares to see if they all have the class of player-one
-        if (
-            
-            circle1.classList.contains('red') &&
-            circle2.classList.contains('red') &&
-            circle3.classList.contains('red') &&
-            circle4.classList.contains('red')
-        )
-        {
-            console.log('Red Wins!')
-        }
-        //check those squares to see if they all have the class of player-two
-        else if (
-            circle1.classList.contains('yellow') &&
-            circle2.classList.contains('yellow') &&
-            circle3.classList.contains('yellow') &&
-            circle4.classList.contains('yellow')
-        )
-        {
-            console.log('Yellow Wins!')
-        }
-        }
+    const col1row6red = document.getElementById('column1-row6').classList.contains('red')
+    const col1row5red = document.getElementById('column1-row5').classList.contains('red') 
+    const col1row4red =  document.getElementById('column1-row4').classList.contains('red')
+    const col1row3red = document.getElementById('column1-row3').classList.contains('red')
+   if (col1row6red && col1row5red && col1row4red && col1row3red) {
+        alert('red wins');
     }
-  }
-  
+    const col2row6red = document.getElementById('column2-row6').classList.contains('red')
+    const col2row5red = document.getElementById('column2-row5').classList.contains('red') 
+    const col2row4red =  document.getElementById('column2-row4').classList.contains('red')
+    const col2row3red = document.getElementById('column2-row3').classList.contains('red')
+   if (col2row6red && col2row5red && col2row4red && col2row3red) {
+        alert('red wins');
+    }
+    const col3row6red = document.getElementById('column3-row6').classList.contains('red')
+    const col3row5red = document.getElementById('column3-row5').classList.contains('red') 
+    const col3row4red =  document.getElementById('column3-row4').classList.contains('red')
+    const col3row3red = document.getElementById('column3-row3').classList.contains('red')
+   if (col3row6red && col3row5red && col3row4red && col3row3red) {
+        alert('red wins');
+    }
+    const col4row6red = document.getElementById('column4-row6').classList.contains('red')
+    const col4row5red = document.getElementById('column4-row5').classList.contains('red') 
+    const col4row4red =  document.getElementById('column4-row4').classList.contains('red')
+    const col4row3red = document.getElementById('column4-row3').classList.contains('red')
+   if (col4row6red && col4row5red && col4row4red && col4row3red) {
+        alert('red wins');
+    }
+    const col5row6red = document.getElementById('column5-row6').classList.contains('red')
+    const col5row5red = document.getElementById('column5-row5').classList.contains('red') 
+    const col5row4red =  document.getElementById('column5-row4').classList.contains('red')
+    const col5row3red = document.getElementById('column5-row3').classList.contains('red')
+   if (col5row6red && col5row5red && col5row4red && col5row3red) {
+        alert('red wins');
+    }
+    const col6row6red = document.getElementById('column6-row6').classList.contains('red')
+    const col6row5red = document.getElementById('column6-row5').classList.contains('red') 
+    const col6row4red =  document.getElementById('column6-row4').classList.contains('red')
+    const col6row3red = document.getElementById('column6-row3').classList.contains('red')
+   if (col6row6red && col6row5red && col6row4red && col6row3red) {
+        alert('red wins');
+    }
+    const col1row6yellow = document.getElementById('column1-row6').classList.contains('yellow')
+    const col1row5yellow = document.getElementById('column1-row5').classList.contains('yellow') 
+    const col1row4yellow =  document.getElementById('column1-row4').classList.contains('yellow')
+    const col1row3yellow = document.getElementById('column1-row3').classList.contains('yellow')
+    if (col1row6yellow && col1row5yellow && col1row4yellow && col1row3yellow) {
+        alert('yellow wins');
+    }
+    const col2row6yellow = document.getElementById('column2-row6').classList.contains('yellow')
+    const col2row5yellow = document.getElementById('column2-row5').classList.contains('yellow') 
+    const col2row4yellow =  document.getElementById('column2-row4').classList.contains('yellow')
+    const col2row3yellow = document.getElementById('column2-row3').classList.contains('yellow')
+    if (col2row6yellow && col2row5yellow && col2row4yellow && col2row3yellow) {
+        alert('yellow wins');
+    }
+}
+
 // gravity = [6,6,6,6,6,6]
 // onlclick for column 0
 //     fill in index (0,row[0])
