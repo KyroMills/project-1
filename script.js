@@ -134,37 +134,79 @@ function checkBoard() {
     const col1row5red = document.getElementById('column1-row5').classList.contains('red') 
     const col1row4red =  document.getElementById('column1-row4').classList.contains('red')
     const col1row3red = document.getElementById('column1-row3').classList.contains('red')
+    const col1row2red = document.getElementById('column1-row2').classList.contains('red')
+    const col1row1red = document.getElementById('column1-row1').classList.contains('red')
    if (col1row6red && col1row5red && col1row4red && col1row3red) {
+        alert('red wins');
+    }
+    if (col1row1red && col1row2red && col1row3red && col1row4red) {
+        alert('red wins');
+    } 
+    if (col1row5red && col1row4red && col1row3red && col1row2red) {
         alert('red wins');
     }
     const col2row6red = document.getElementById('column2-row6').classList.contains('red')
     const col2row5red = document.getElementById('column2-row5').classList.contains('red') 
     const col2row4red =  document.getElementById('column2-row4').classList.contains('red')
     const col2row3red = document.getElementById('column2-row3').classList.contains('red')
+    const col2row2red =  document.getElementById('column2-row2').classList.contains('red')
+    const col2row1red =  document.getElementById('column2-row1').classList.contains('red')
    if (col2row6red && col2row5red && col2row4red && col2row3red) {
+        alert('red wins');
+    }
+    if (col2row1red && col2row2red && col2row3red && col2row4red) {
+        alert('red wins');
+    } 
+    if (col2row5red && col2row4red && col2row3red && col2row2red) {
         alert('red wins');
     }
     const col3row6red = document.getElementById('column3-row6').classList.contains('red')
     const col3row5red = document.getElementById('column3-row5').classList.contains('red') 
     const col3row4red =  document.getElementById('column3-row4').classList.contains('red')
     const col3row3red = document.getElementById('column3-row3').classList.contains('red')
+    const col3row2red =  document.getElementById('column3-row2').classList.contains('red')
+    const col3row1red =  document.getElementById('column3-row1').classList.contains('red')
    if (col3row6red && col3row5red && col3row4red && col3row3red) {
+        alert('red wins');
+    }
+    if (col3row1red && col3row2red && col3row3red && col3row4red) {
+        alert('red wins');
+    } 
+    if (col3row5red && col3row4red && col3row3red && col3row2red) {
         alert('red wins');
     }
     const col4row6red = document.getElementById('column4-row6').classList.contains('red')
     const col4row5red = document.getElementById('column4-row5').classList.contains('red') 
     const col4row4red =  document.getElementById('column4-row4').classList.contains('red')
     const col4row3red = document.getElementById('column4-row3').classList.contains('red')
+    const col4row2red =  document.getElementById('column4-row2').classList.contains('red')
+    const col4row1red =  document.getElementById('column4-row1').classList.contains('red')
    if (col4row6red && col4row5red && col4row4red && col4row3red) {
         alert('red wins');
-    }
+   }
+    if (col4row1red && col4row2red && col4row3red && col4row4red) {
+        alert('red wins');
+    } 
+    if (col4row5red && col4row4red && col4row3red && col4row2red) {
+        alert('red wins');
+        }
+    
     const col5row6red = document.getElementById('column5-row6').classList.contains('red')
     const col5row5red = document.getElementById('column5-row5').classList.contains('red') 
     const col5row4red =  document.getElementById('column5-row4').classList.contains('red')
     const col5row3red = document.getElementById('column5-row3').classList.contains('red')
+    const col5row2red =  document.getElementById('column5-row2').classList.contains('red')
+    const col5row1red =  document.getElementById('column5-row1').classList.contains('red')
    if (col5row6red && col5row5red && col5row4red && col5row3red) {
         alert('red wins');
     }
+    if (col5row1red && col5row2red && col5row3red && col5row4red) {
+        alert('red wins');
+    } 
+    if (col5row5red && col5row4red && col5row3red && col5row2red) {
+        alert('red wins');
+        }
+
     const col6row6red = document.getElementById('column6-row6').classList.contains('red')
     const col6row5red = document.getElementById('column6-row5').classList.contains('red') 
     const col6row4red =  document.getElementById('column6-row4').classList.contains('red')
@@ -172,6 +214,7 @@ function checkBoard() {
    if (col6row6red && col6row5red && col6row4red && col6row3red) {
         alert('red wins');
     }
+    
     const col1row6yellow = document.getElementById('column1-row6').classList.contains('yellow')
     const col1row5yellow = document.getElementById('column1-row5').classList.contains('yellow') 
     const col1row4yellow =  document.getElementById('column1-row4').classList.contains('yellow')
@@ -214,4 +257,6 @@ function checkBoard() {
     if (col6row6yellow && col6row5yellow && col6row4yellow && col6row3yellow) {
         alert('yellow wins');
     }
+    // start horizontal
+    
 }
