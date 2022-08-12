@@ -333,4 +333,36 @@ function checkBoard() {
     if (col3row5red && col4row5red && col5row5red && col6row5red) {
         alert('red wins');
     }
+    // ROW 4
+    if (col1row4red && col2row4red && col3row4red && col4row4red) {
+        alert('red wins');
+    }
+    if (col2row4red && col3row4red && col4row4red && col5row4red) {
+        alert('red wins');
+    } 
+    if (col3row4red && col4row4red && col5row4red && col6row4red) {
+        alert('red wins');
+    }
+    // ROW 3
+    if (col1row3red && col2row3red && col3row3red && col4row3red) {
+        alert('red wins');
+    }
+    if (col2row3red && col3row3red && col4row3red && col5row3red) {
+        alert('red wins');
+    } 
+    if (col3row3red && col4row3red && col5row3red && col6row3red) {
+        alert('red wins');
+    }
+    // ROW 2
+    if (col1row2red && col2row2red && col3row2red && col4row2red) {
+        alert('red wins');
+    }
+    if (col2row2red && col3row2red && col4row2red && col5row2red) {
+        alert('red wins');
+    } 
+    if (col3row2red && col4row2red && col5row2red && col6row2red) {
+        alert('red wins');
+    }
 }
+    
+    
