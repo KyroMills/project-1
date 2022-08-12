@@ -12,4 +12,5 @@ This is a very simple and plain connect 4 game for practicing HTML, CSS, and Jav
 ## Languages Used
 HTML,CSS,JAVASCRIPT
 
-
+## Deployed Game
+https://fantastic-dodol-155c87.netlify.app

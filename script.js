@@ -42,61 +42,53 @@ function winningScore() {
     return;
 }
 
-// document.getElementById('circle').onclick = changeColor;   
 
-// function onClick() {
- let getCircles = document.querySelectorAll('.circle')
-  getCircles.forEach(function(element) {
-    let fillCircle = element.style;
-    element.addEventListener('click',function() {
-
-        // console.log(this.id.split('-'))
-        let idSplit = this.id.split('-')
-        let column = idSplit[0]
-        // console.log(column)
-        let row = idSplit[1]
-        // console.log(row)
-        if (firstPlayer === playerR) {
-            if (document.getElementById(column+'-row2').classList.contains('taken')) {
-              document.getElementById(column+'-row1').classList.add('taken', 'red')
-            //   if row2 contains taken class then add taken and red to the row above
-              console.log('not taken')
-              firstPlayer = playerY
-            //   switch to playerY
-            } else if (document.getElementById(column+'-row3').classList.contains('taken')) {
-                document.getElementById(column+'-row2').classList.add('taken','red')
-                firstPlayer = playerY
-            } else if (document.getElementById(column+'-row4').classList.contains('taken')) {
-                document.getElementById(column+'-row3').classList.add('taken','red')
-                firstPlayer = playerY
-            }else if (document.getElementById(column+'-row5').classList.contains('taken')) {
-                document.getElementById(column+'-row4').classList.add('taken','red')
-                firstPlayer = playerY
-            } else if (document.getElementById(column+'-row6').classList.contains('taken')) {
-                document.getElementById(column+'-row5').classList.add('taken','red')
-                firstPlayer = playerY
-            } else {
-                document.getElementById(column+'-row6').classList.add('taken','red')
-                firstPlayer = playerY
+let getCircles = document.querySelectorAll('.circle')
+getCircles.forEach(function(element) {
+let fillCircle = element.style;
+element.addEventListener('click',function() {
+    let idSplit = this.id.split('-')
+    let column = idSplit[0]
+    let row = idSplit[1]
+    if (firstPlayer === playerR) {
+    if (document.getElementById(column+'-row2').classList.contains('taken')) {
+        document.getElementById(column+'-row1').classList.add('taken', 'red')
+        console.log('not taken')
+            firstPlayer = playerY
+    } else if (document.getElementById(column+'-row3').classList.contains('taken')) {
+        document.getElementById(column+'-row2').classList.add('taken','red')
+        firstPlayer = playerY
+    } else if (document.getElementById(column+'-row4').classList.contains('taken')) {
+            document.getElementById(column+'-row3').classList.add('taken','red')
+            firstPlayer = playerY
+    }else if (document.getElementById(column+'-row5').classList.contains('taken')) {
+            document.getElementById(column+'-row4').classList.add('taken','red')
+            firstPlayer = playerY
+    } else if (document.getElementById(column+'-row6').classList.contains('taken')) {
+            document.getElementById(column+'-row5').classList.add('taken','red')
+            firstPlayer = playerY
+        } else {
+            document.getElementById(column+'-row6').classList.add('taken','red')
+            firstPlayer = playerY
             }
         } else {
-            if (document.getElementById(column+'-row2').classList.contains('taken')) {
-                document.getElementById(column+'-row1').classList.add('taken', 'yellow')
+        if (document.getElementById(column+'-row2').classList.contains('taken')) {
+            document.getElementById(column+'-row1').classList.add('taken', 'yellow')
                 console.log('not taken')
                 firstPlayer = playerR
-              } else if (document.getElementById(column+'-row3').classList.contains('taken')) {
+            } else if (document.getElementById(column+'-row3').classList.contains('taken')) {
                   document.getElementById(column+'-row2').classList.add('taken','yellow')
                   firstPlayer = playerR
-              } else if (document.getElementById(column+'-row4').classList.contains('taken')) {
+            } else if (document.getElementById(column+'-row4').classList.contains('taken')) {
                   document.getElementById(column+'-row3').classList.add('taken','yellow')
                   firstPlayer = playerR
-              }else if (document.getElementById(column+'-row5').classList.contains('taken')) {
+            }else if (document.getElementById(column+'-row5').classList.contains('taken')) {
                   document.getElementById(column+'-row4').classList.add('taken','yellow')
                   firstPlayer = playerR
-              } else if (document.getElementById(column+'-row6').classList.contains('taken')) {
+            } else if (document.getElementById(column+'-row6').classList.contains('taken')) {
                   document.getElementById(column+'-row5').classList.add('taken','yellow')
                   firstPlayer = playerR
-              } else {
+            } else {
                   document.getElementById(column+'-row6').classList.add('taken','yellow')
                   firstPlayer = playerR
                   
@@ -222,23 +214,4 @@ function checkBoard() {
     if (col6row6yellow && col6row5yellow && col6row4yellow && col6row3yellow) {
         alert('yellow wins');
     }
-    // horizontal
-    
 }
-
-// gravity = [6,6,6,6,6,6]
-// onlclick for column 0
-//     fill in index (0,row[0])
-//     -1 from index 0
-// onlclick for column 1
-//     fill in index (1,row[1])
-// -1 from index 
-
-// render game
-// store data in an array
-// winconditon if player1 hits 4 solid colors in a row
-// console log 'player 1 wins'
-// lose condition if other player gets to 4 solid colors first
-// console log 'player 2 wins'
-// use the addEventListener('click') event to make sure all buttons are clickable
-// make reset button refresh the page
