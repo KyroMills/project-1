@@ -1,0 +1,43 @@
+/* html, body {
+    height: 100%;
+    width: 100%;
+  } */
+  
+  .grid {
+    display: grid;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+    grid-template-columns: repeat(6,90px);
+    grid-template-rows: repeat(6,90px);
+    height: 770px;
+    width: 660px;
+    margin: 0 auto;
+    padding-top: 100px;
+    justify-content: center;
+    background-color: white
+  
+    }
+  .circle {
+      border: 1px solid black;
+      border-radius: 50%;
+    background-color: white;
+  
+  }
+  .red {
+    background-color: red;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+
+  #resetButton {
+    margin-left: 900px;
+   
+  }
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  
