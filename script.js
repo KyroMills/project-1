@@ -49,7 +49,7 @@ winMessageDiv = document.querySelector("#message");
         // console.log(this.id.split('-'))
         let idSplit = this.id.split('-')
         let column = idSplit[0]
-        console.log(column)
+        // console.log(column)
         let row = idSplit[1]
         // console.log(row)
         if (firstPlayer === playerR) {
@@ -96,77 +96,45 @@ winMessageDiv = document.querySelector("#message");
                   document.getElementById(column+'-row6').classList.add('taken','yellow')
                   firstPlayer = playerR
               }
-              checkBoard()
+              
         }
-        function checkBoard() {
-            for (let y = 0; y < winningArray.length; y++) {
-              const circle1 = circleButtons[winningArray[y][0]]
-              const circle2 = circleButtons[winningArray[y][1]]
-              const circle3 = circleButtons[winningArray[y][2]]
-              const circle4 = circleButtons[winningArray[y][3]]
         
-              //check those squares to see if they all have the class of player-one
-              if (
-                circle1.classList.contains('playerR') &&
-                circle2.classList.contains('playerR') &&
-                circle3.classList.contains('playerR') &&
-                circle4.classList.contains('playerR')
-              )
-              {
-                alert ('Red Wins!')
-              }
-              //check those squares to see if they all have the class of player-two
-              if (
-                circle1.classList.contains('playerY') &&
-                circle2.classList.contains('playerY') &&
-                circle3.classList.contains('playerY') &&
-                circle4.classList.contains('playerY')
-              )
-              {
-                alert ('Yellow Wins!')
-              }
-            }
-          }
-         
-        //     if (document.getElementById('column2-row1').classList.contains('taken')) {
-        //         document.getElementById('column1-row1').classList.add('taken')
-        //         fillCircle.backgroundColor = 'yellow';
-        //         firstPlayer = playerR;
-        //         console.log('column1-row1')
-        //     }else if (document.getElementById('column3-row1').classList.contains('taken'))          { document.getElementById('column2-row1').classList.add('taken');                         fillCircle.backgroundColor = 'yellow';
-        //          firstPlayer = playerR; 
-        //         console.log('yellows turn')
-        //   } else if (document.getElementById('column4-row1').classList.contains('taken')) {
-        //         document.getElementById('column3-row1').classList.add('taken');
-        //         fillCircle.backgroundColor = 'yellow';
-        //         firstPlayer = playerR;
-        //   } else if (document.getElementById('column5-row1').classList.contains('taken')) {
-        //         document.getElementById('column4-row1').classList.add('taken');
-        //         fillCircle.backgroundColor = 'yellow';
-        //         firstPlayer = playerR;
-        //   } else if (document.getElementById('column6-row1').classList.contains('taken')) {
-        //         document.getElementById('column5-row1').classList.add('taken');
-        //         fillCircle.backgroundColor = 'yellow';
-        //         firstPlayer = playerR;
-        //       }
-        //     else {
-        //         console.log("bye")
-        //       }
-            
-    //   if (countClicks % 2 === 0 && fillCircle.backgroundColor !== 'red' && fillCircle.backgroundColor !== 'blue') {
-    //         console.log(countClicks % 2 === 0);
-            
-    //         fillCircle.backgroundColor = 'red';
-    //         countClicks += 1;
-    //     } else if (fillCircle.backgroundColor !== 'red' && fillCircle.backgroundColor !== 'blue') {
-            
-    //         fillCircle.backgroundColor = 'blue';
-    //         countClicks += 1;
-    //     }
-    })}
+    }) 
+}
 );
 
+checkBoard()
+function checkBoard() {
+    for (let y = 0; y < winningArray.length; y++) {
+      const circle1 = circleButtons[winningArray[y][0]]
+      console.log(circle1)
+      const circle2 = circleButtons[winningArray[y][1]]
+      const circle3 = circleButtons[winningArray[y][2]]
+      const circle4 = circleButtons[winningArray[y][3]]
 
+      //check those squares to see if they all have the class of player-one
+      if (
+        circle1.classList.contains('red') &&
+        circle2.classList.contains('red') &&
+        circle3.classList.contains('red') &&
+        circle4.classList.contains('red')
+      )
+      {
+        console.log('Red Wins!')
+      }
+      //check those squares to see if they all have the class of player-two
+      else if (
+        circle1.classList.contains('yellow') &&
+        circle2.classList.contains('yellow') &&
+        circle3.classList.contains('yellow') &&
+        circle4.classList.contains('yellow')
+      )
+      {
+        console.log('Yellow Wins!')
+      }
+    }
+  }
+  
 // gravity = [6,6,6,6,6,6]
 // onlclick for column 0
 //     fill in index (0,row[0])
